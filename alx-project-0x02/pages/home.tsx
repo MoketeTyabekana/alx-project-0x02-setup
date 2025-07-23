@@ -23,7 +23,7 @@ const Home: React.FC = () => {
          <Button
           title="Add New Post"
          onClick={handleOpenModal}
-
+    
          />
 
          <PostModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>

@@ -1,8 +1,20 @@
 
 
+
 export interface CardProps{
    title: string,
    content: string,
+}
+
+export interface PostProps{
+    userId:number;
+    title:string;
+    body:string
+    id:number
+}
+
+export interface PostsPageProps {
+  posts: PostProps[];
 }
 
 export interface ButtonProps {

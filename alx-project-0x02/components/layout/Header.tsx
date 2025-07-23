@@ -23,6 +23,10 @@ const Header: React.FC = () => {
           <Link href="/posts" className={isActive("/posts")}>
             Posts
           </Link>
+
+          <Link href="/users" className={isActive("/users")}>
+            Users
+          </Link>
         </div>
       </nav>
     </header>

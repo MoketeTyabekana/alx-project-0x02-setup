@@ -32,22 +32,22 @@ export interface PostModalProps {
 }
 
 export interface UserProps  {
-    id:       number;
+    id?:       number;
     name:     string;
     username: string;
     email:    string;
-    address:  Address;
-    phone:    string;
+    address?:  Address;
+    phone?:    string;
     website:  string;
-    company:  Company;
+    company?:  Company;
 }
 
 export interface Address {
-    street:  string;
-    suite:   string;
-    city:    string;
-    zipcode: string;
-    geo:     Geo;
+    street?:  string;
+    suite?:   string;
+    city?:    string;
+    zipcode?: string;
+    geo?:     Geo;
 }
 
 export interface Geo {
@@ -59,6 +59,10 @@ export interface Company {
     name:        string;
     catchPhrase: string;
     bs:          string;
+}
+
+export interface UsersPageProps {
+  users: UserProps[];
 }
 
 

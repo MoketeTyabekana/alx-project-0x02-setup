@@ -20,4 +20,4 @@ export interface PostModalProps {
 }
 
 
-//   onSubmit:(data:{title:string,content:string})=>void;
+

@@ -4,48 +4,39 @@ import Card from "@/components/common/Card";
 import Button from "@/components/common/Button";
 import PostModal from "@/components/common/PostModal";
 
-
 const Home: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
 
-    const[isModalOpen,setModalOpen]=useState(false);
-
-
-     const handleOpenModal=()=>{
-     setModalOpen(true);
- }
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
 
   return (
-
     <main>
       <section>
-       <div className="flex justify-between items-center py-4 ">
-         <h1 className="text-2xl text-blue-400 font-bold">Posts</h1>
-         <Button
-          title="Add New Post"
-         onClick={handleOpenModal}
-    
-         />
+        <div className="flex justify-between items-center py-4 ">
+          <h1 className="text-2xl text-blue-400 font-bold">Posts</h1>
+          <Button title="Add New Post" onClick={handleOpenModal} />
 
-         <PostModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>
-       </div>
-        <div className="grid grid-cols-3 justify-between gap-2 mt-10">
-             <Card
-             title="Mokete Tyabekana"
-             content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
-             />
-
-                  <Card
-     title="Mokete Tyabekana"
-     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
-     />
+          <PostModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 justify-between gap-2 mt-10">
+          <Card
+            title="Mokete Tyabekana"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
+          />
 
           <Card
-     title="Mokete Tyabekana"
-     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
-     />
+            title="Mokete Tyabekana"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
+          />
+
+          <Card
+            title="Mokete Tyabekana"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tenetur sapiente nam iure? Debitis sed similique esse amet sint omnis?"
+          />
         </div>
       </section>
-      
     </main>
   );
 };

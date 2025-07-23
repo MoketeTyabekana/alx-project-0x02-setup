@@ -1,11 +1,31 @@
 import React from "react";
+import { useState } from "react";
 import Card from "@/components/common/Card";
+import Button from "@/components/common/Button";
+import PostModal from "@/components/common/PostModal";
+
 
 const Home: React.FC = () => {
+
+    const[isModalOpen,setModalOpen]=useState(false);
+
+
+     const handleOpenModal=()=>{
+     setModalOpen(true);
+ }
+
   return (
+
     <main>
       <section>
-        <h1>Home</h1>
+       <div className="flex justify-between items-center py-4 ">
+         <h1 className="text-2xl text-blue-400 font-bold">Posts</h1>
+         <Button
+          title="Add New Post"
+         onClick={handleOpenModal}
+
+         />
+       </div>
         <div className="grid grid-cols-3 justify-between gap-2 mt-10">
              <Card
              title="Mokete Tyabekana"

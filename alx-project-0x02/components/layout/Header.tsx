@@ -14,9 +14,6 @@ const Header: React.FC = () => {
     <header className="w-full bg-gray-50 shadow-md">
       <nav className=" px-10 py-6 flex items-center justify-between">
         <div className="space-x-6">
-          <Link href="/" className={isActive("/")}>
-            Landing Page
-          </Link>
           <Link href="/home" className={isActive("/home")}>
             Home
           </Link>

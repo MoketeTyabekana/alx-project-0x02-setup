@@ -25,6 +25,8 @@ const Home: React.FC = () => {
          onClick={handleOpenModal}
 
          />
+
+         <PostModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>
        </div>
         <div className="grid grid-cols-3 justify-between gap-2 mt-10">
              <Card

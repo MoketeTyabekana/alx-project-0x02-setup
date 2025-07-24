@@ -12,7 +12,7 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
           <div className="grid grid-cols-3 gap-4">
             {users.slice(0,20).map(({ id,name, username, address, email,website }) => (
               <UserCard
-               key={id}
+                key={id}
                 website={website}
                 name={name}
                 address={address}
